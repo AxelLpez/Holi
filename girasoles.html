@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girasoles</title>
+    <style>
+        body {
+            background-color: #ffebcc; /* Color cálido y alegre */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .sunflower {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            animation: grow 2s ease-out forwards;
+        }
+
+        @keyframes grow {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .message {
+            position: absolute;
+            bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 24px;
+            display: none;
+            animation: appear 1s ease forwards;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://i.imgur.com/TfR8Acd.png" class="sunflower" style="left: 100px;">
+    <img src="https://i.imgur.com/TfR8Acd.png" class="sunflower" style="left: 250px;">
+    <img src="https://i.imgur.com/TfR8Acd.png" class="sunflower" style="left: 400px;">
+    <img src="https://i.imgur.com/TfR8Acd.png" class="sunflower" style="left: 550px;">
+    <img src="https://i.imgur.com/TfR8Acd.png" class="sunflower" style="left: 700px;">
+    
+    <div class="message">Eres la mejor</div>
+
+    <script>
+        // Después de que florecen los girasoles, se muestra el mensaje
+        setTimeout(function() {
+            document.querySelector('.message').style.display = 'block';
+        }, 2500); // Tiempo después de que terminan de crecer los girasoles
+    </script>
+
+</body>
+</html>
